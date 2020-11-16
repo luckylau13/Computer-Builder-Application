@@ -1,2 +1,2 @@
 # Computer Builder Application
- An application that allow users to select computer components availale in the shop and buid their desire computer specs. 
+A desktop application that allow users to select computer components available in the shop and build their desire computer specs. 
