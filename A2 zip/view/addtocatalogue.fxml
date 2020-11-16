@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.Button?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1"
+fx:controller="controller.AddToCatalogueController" prefWidth="300" spacing="10" alignment="center">
+
+<GridPane hgap="10" vgap="10" alignment="center">    
+    <Label text="Type:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+    <TextField fx:id="Typetf" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+    <Label text="Name:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+    <TextField fx:id="Nametf" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+    <Label text="Price:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+    <TextField fx:id="Pricetf" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+</GridPane>
+    <Button fx:id="Addtc" text="Add to Catalogue" onAction="#handleAddtc" />
+	<stylesheets>
+		<URL value="@computerbuilder.css" />
+	</stylesheets>
+</VBox>
+

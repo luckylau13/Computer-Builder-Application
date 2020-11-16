@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.*?>
+
+
+
+<VBox xmlns:fx="http://javafx.com/fxml/1"
+fx:controller="controller.CatalogueController" prefWidth="500" spacing="10">
+   
+    <TableView fx:id="partsTv" prefWidth="500" prefHeight="300">
+        <placeholder>
+            <Label text= "No parts in catalogue"/>
+        </placeholder>
+        <columns>
+            
+            <TableColumn text="Type">
+                <cellValueFactory><PropertyValueFactory property="type"/></cellValueFactory>
+            </TableColumn>
+            
+            <TableColumn text="Name">
+                <cellValueFactory><PropertyValueFactory property="name"/></cellValueFactory>
+            </TableColumn>
+            
+            <TableColumn fx:id = "Price" text="Price"/>
+               
+              
+        </columns>
+        </TableView>
+        
+        <GridPane fx:id="Filters" hgap="10" vgap="10">
+      
+            <Label text="Filters" GridPane.columnIndex="0" GridPane.rowIndex="0" styleClass="h2" />
+            <Label text="Type:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            <TextField fx:id="Typetf" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.columnSpan="3"/> 
+            <Label text="Price Range:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+            <TextField fx:id="minPricetf" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label text="to" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <TextField fx:id="maxPricetf" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+        </GridPane>
+           <Button fx:id="Addtb" text="Add Selected to Build" disable="true" onAction="#handleAddtb"/>
+            <Button fx:id="Addnc" text="Add New Part to Catalogue" onAction="#handleAddnc"/>
+            <Button fx:id="Removesc" text="Remove Selected from Catalogue" disable="true" onAction="#handleRemovesc"/>
+            <Button fx:id="Close" text="Close" onAction="#handleClose"/>
+        
+        
+  
+    
+	<stylesheets>
+		<URL value="@computerbuilder.css" />
+	</stylesheets>
+
+</VBox>
+

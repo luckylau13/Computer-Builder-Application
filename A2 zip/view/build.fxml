@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1"
+fx:controller="controller.BuildController" prefWidth="500" spacing="10">
+   
+    <TableView fx:id="BuildTv" prefWidth="500" prefHeight="300">
+        <placeholder>
+            <Label text= "No parts in current build."/>
+        </placeholder>
+        <columns>
+            
+            <TableColumn text="Type">
+                <cellValueFactory><PropertyValueFactory property="type"/></cellValueFactory>
+            </TableColumn>
+            
+            <TableColumn text="Name">
+                <cellValueFactory><PropertyValueFactory property="name"/></cellValueFactory>
+            </TableColumn>
+            
+            <TableColumn fx:id = "Price" text="Price"/>
+               
+              
+        </columns>
+        </TableView>
+        
+        <!-- <GridPane fx:id="Filters" hgap="10" vgap="10"> -->
+      
+            
+         <!--</GridPane> -->
+         
+             <HBox alignment="center_right" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                 <Label text="Total:"/>
+                  <Text fx:id="priceTxt"/>
+	</HBox>
+            
+    
+         
+         
+           <Button fx:id="Checkb" text="Check Build" onAction="#handleCheckb"/>
+            <Button fx:id="Removesb" text="Remove Select from Build" onAction="#handleRemovesb" disable="True"/>
+            <Button fx:id="Close" text="Close" onAction="#handleClose"/>
+            
+            
+            
+        
+        
+  
+    
+
+	<stylesheets>
+		<URL value="@computerbuilder.css" />
+	</stylesheets>
+</VBox>
+
